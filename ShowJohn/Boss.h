@@ -11,13 +11,13 @@ typedef struct boss_s
 	employee_t *underlings;
 	unsigned int underling_count;
 }boss_t;
-const employee_vtable_ BOSS_VTABLE_[] = { { print_boss } };
+
 
 void new_boss(boss_t *obj, const char *first_name, const char *last_name,
 	unsigned int employee_number, double pay, employee_t *underlings,
 	unsigned int underling_count);
 void print_boss(employee_t *worker_temp);
 
-
+const employee_vtable_ BOSS_VTABLE_[] = { { print_boss } };
 
 #endif
