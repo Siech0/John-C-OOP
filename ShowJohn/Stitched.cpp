@@ -1,10 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 struct employee_s;
+struct boss_s;
 struct employee_vtable_s;
+
 typedef employee_s employee_t;
+typedef boss_s boss_t;
 typedef employee_vtable_s employee_vtable_;
+
+
+struct employee_vtable_s
+{
+	void(*print)(employee_t *);
+};
 
 struct employee_s
 {
@@ -14,19 +24,8 @@ struct employee_s
 	double pay;
 	const employee_vtable_ *vtable_;
 };
+const employee_vtable_ EMPLOYEE_VTABLE_[] = { {print_employee } };
 
-struct employee_vtable_s
-{
-	void(*print)(employee_t *);
-};
-
-
-void new_employee(employee_t *obj, const char *first_name, const char *last_name,
-	unsigned int employee_number, double pay);
-void print_employee(employee_t *worker);
-void print_worker(employee_t *worker);
-
-const employee_vtable_ EMPLOYEE_VTABLE_[] = { print_employee };
 
 typedef struct boss_s
 {
@@ -34,14 +33,20 @@ typedef struct boss_s
 	employee_t *underlings;
 	unsigned int underling_count;
 }boss_t;
+const employee_vtable_ BOSS_VTABLE_[] = {{ print_boss }};
+
+
+void new_employee(employee_t *obj, const char *first_name, const char *last_name,
+	unsigned int employee_number, double pay);
+void print_employee(employee_t *worker);
+void print_worker(employee_t *worker);
 
 
 void new_boss(boss_t *obj, const char *first_name, const char *last_name,
 	unsigned int employee_number, double pay, employee_t *underlings,
 	unsigned int underling_count);
 void print_boss(employee_t *worker_temp);
-
-const employee_vtable_ BOSS_VTABLE_[] = { { print_boss } };
+//END DEFINITIONS
 
 
 int main(int argc, char *argv[])
@@ -68,6 +73,8 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
+
+//end main
 void print_employee(employee_t *worker)
 {
 	printf("Name: %s %s ID: %u, Pay: %.2f\n",
@@ -89,6 +96,8 @@ void print_worker(employee_t *worker)
 {
 	worker->vtable_->print(worker);
 }
+
+
 
 void print_boss(employee_t *worker_temp)
 {
