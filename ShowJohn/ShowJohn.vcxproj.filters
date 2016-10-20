@@ -24,7 +24,7 @@
     <ClCompile Include="Employee.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Stitched.cpp">
+    <ClCompile Include="Stitched.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
