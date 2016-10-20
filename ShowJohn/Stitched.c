@@ -37,12 +37,12 @@ struct employee_s
 const employee_vtable_ *EMPLOYEE_VTABLE_ = {print_employee};
 
 
-typedef struct boss_s
+struct boss_s
 {
 	employee_t base;
 	employee_t *underlings;
 	unsigned int underling_count;
-}boss_t;
+};
 const employee_vtable_ *BOSS_VTABLE_ = {print_boss};
 //END DEFINITIONS
 
