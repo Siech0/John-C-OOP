@@ -1,8 +1,8 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-#include <cstdio>
-
+#include <stdio.h>
+/*
 struct employee_s;
 struct employee_vtable_s;
 typedef employee_s employee_t;
@@ -29,5 +29,5 @@ void print_employee(employee_t *worker);
 void print_worker(employee_t *worker);
 
 const employee_vtable_ EMPLOYEE_VTABLE_[] = { print_employee };
-
+*/
 #endif

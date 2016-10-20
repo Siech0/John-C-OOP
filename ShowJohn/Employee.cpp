@@ -1,5 +1,6 @@
 #include "Employee.h"
 
+/*
 void print_employee(employee_t *worker)
 {
 	printf("Name: %s %s ID: %u, Pay: %.2f\n",
@@ -21,3 +22,4 @@ void print_worker(employee_t *worker)
 {
 	worker->vtable_->print(worker);
 }
+*/

@@ -113,6 +113,7 @@
     <ClCompile Include="Boss.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Program.cpp" />
+    <ClCompile Include="Stitched.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Boss.h" />

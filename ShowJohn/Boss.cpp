@@ -1,6 +1,6 @@
 #include "Boss.h"
 
-
+/*
 void print_boss(employee_t *worker_temp)
 {
 	unsigned int i;
@@ -26,3 +26,4 @@ void new_boss(boss_t *obj, const char *first_name, const char *last_name,
 	obj->underling_count = underling_count;
 	obj->base.vtable_ = BOSS_VTABLE_;
 }
+*/

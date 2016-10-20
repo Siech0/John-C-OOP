@@ -1,10 +1,10 @@
 #ifndef BOSS_H
 #define BOSS_H
 
-#include <cstdio>
+#include <stdio.h>
 #include "Employee.h"
 
-
+/*
 typedef struct boss_s
 {
 	employee_t base;
@@ -19,5 +19,6 @@ void new_boss(boss_t *obj, const char *first_name, const char *last_name,
 void print_boss(employee_t *worker_temp);
 
 const employee_vtable_ BOSS_VTABLE_[] = { { print_boss } };
+*/
 
 #endif

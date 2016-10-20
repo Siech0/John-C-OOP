@@ -1,8 +1,10 @@
+/*
 #include <cstdio>
 #include <cstdlib>
 
 #include "Boss.h"
 #include "Employee.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -27,7 +29,7 @@ int main(int argc, char *argv[])
 	free(boss);
 	return 0;
 }
-
+*/
 
 
 
